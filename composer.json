@@ -5,8 +5,16 @@
     {
       "type": "vcs",
       "url": "/Users/bwubs/Werk/Robin/Modules/Support"
+    },
+    {
+      "type": "vcs",
+      "url": "/Users/bwubs/Werk/Robin/Modules/Api"
     }
   ],
+  "require": {
+    "robin/api": "~0.1",
+    "seoshop/seoshop-php": "v1.7.0"
+  },
   "require-dev": {
     "phpunit/phpunit": "^4.7",
     "vlucas/phpdotenv": "v2.0.1",
@@ -21,7 +29,10 @@
     }
   ],
   "minimum-stability": "stable",
-  "require": {
-    "robin/support": "~1"
+  "autoload": {
+    "psr-4": {
+      "Robin\\Connect\\": "src/"
+    },
+    "classmap": ["tests/"]
   }
 }
