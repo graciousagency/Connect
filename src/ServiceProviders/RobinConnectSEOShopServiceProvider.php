@@ -1,17 +1,17 @@
 <?php
 
 
-namespace Robin\Connect;
+namespace Robin\Connect\ServiceProviders;
 
 
 use Illuminate\Contracts\Foundation\Application;
 use Illuminate\Support\ServiceProvider;
-use Robin\Connect\Contracts\Sender;
-use Robin\Connect\Contracts\Retriever;
-use Robin\Connect\Robin\Api\Client;
-use Robin\Connect\SEOShop\Api\Client as SEOShopClient;
+use Robin\Support\Contracts\Retriever;
+use Robin\Connect\SEOShop\Client as SEOShop;
+use Robin\Api\Client as Robin;
+use Robin\Support\Contracts\Sender;
 
-class RobinConnectServiceProvider extends ServiceProvider
+class RobinConnectSEOShopServiceProvider extends ServiceProvider
 {
 
     /**
@@ -33,30 +33,30 @@ class RobinConnectServiceProvider extends ServiceProvider
             }
         );
 
-        $this->app->bind(Sender::class, Client::class);
+        $this->app->bind(Sender::class, Robin::class);
 
         $this->app->bind(
-            Client::class,
+            Robin::class,
             function () {
                 $key = env("ROBIN_API_KEY");
                 $secret = env("ROBIN_API_SECRET");
                 $url = env("ROBIN_API_URL");
 
-                return new Client($key, $secret, $url);
+                return new Robin($key, $secret, $url);
             }
         );
 
         $this->app->bind(
             Retriever::class,
-            SEOShopClient::class
+            SEOShop::class
         );
         $this->app->bind(
-            SEOShopClient::class,
+            SEOShop::class,
             function (Application $application) {
                 /** @var \WebshopappApiClient $webshopappApiClient */
                 $webshopappApiClient = $application->make('WebshopappApiClient');
 
-                return new SEOShopClient($webshopappApiClient);
+                return new SEOShop($webshopappApiClient);
             }
         );
     }
