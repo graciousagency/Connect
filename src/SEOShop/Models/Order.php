@@ -102,7 +102,9 @@ use Illuminate\Support\Collection;
  * @property Object quote
  * @property Collection events
  *
- * @method \Robin\Connect\SEOShop\Models\Order makeFromJson(array $order)
+ * @method Order makeFromJson($order)
+ * @method Order makeFromArray(array $order)
+ * @method Order makeFromObject($order)
  */
 class Order extends Model
 {
