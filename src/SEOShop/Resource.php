@@ -23,7 +23,7 @@ class Resource
 
     public $link;
     /**
-     * @var \Robin\Connect\SEOShop\Client
+     * @var \Robin\Connect\SEOShop\SEOShop
      */
     public $retriever;
 

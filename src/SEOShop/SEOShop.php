@@ -11,7 +11,7 @@ use Robin\Connect\SEOShop\Exceptions\EndpointNotCountableException;
 use Robin\Connect\SEOShop\Models\Customer as SEOShopCustomer;
 use Robin\Connect\SEOShop\Models\Order;
 
-class Client implements Retriever
+class SEOShop implements Retriever
 {
     /**
      * @var \WebshopappApiClient

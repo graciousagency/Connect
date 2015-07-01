@@ -2,7 +2,7 @@
 
 use League\Flysystem\Adapter\Local;
 use League\Flysystem\Filesystem;
-use Robin\Connect\SEOShop\Client;
+use Robin\Connect\SEOShop\SEOShop;
 use Robin\Connect\SEOShop\Models\Customer;
 
 class TestCase extends \PHPUnit_Framework_TestCase
@@ -13,7 +13,7 @@ class TestCase extends \PHPUnit_Framework_TestCase
     private $filesystem;
 
     /**
-     * @return Client
+     * @return SEOShop
      */
     public function getSeoshop()
     {
@@ -22,7 +22,7 @@ class TestCase extends \PHPUnit_Framework_TestCase
         $language = env("SEOSHOP_API_LANGUAGE");
 
         $api = new \WebshopappApiClient("live", $key, $secret, $language);
-        return new Client($api);
+        return new SEOShop($api);
     }
 
     public function getRobin()
