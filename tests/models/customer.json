@@ -1,0 +1,121 @@
+{
+  "customer": {
+    "id": 6856292,
+    "createdAt": "2015-06-08T20:10:28+02:00",
+    "updatedAt": "2015-06-08T20:10:33+02:00",
+    "isConfirmed": true,
+    "type": "registered",
+    "lastOnlineAt": "2015-06-08T20:10:33+02:00",
+    "remoteIp": "87.250.154.93",
+    "userAgent": "WebshopappApi",
+    "referralId": false,
+    "gender": "male",
+    "birthDate": false,
+    "nationalId": "",
+    "email": "2n2td7owy2kbf7topa4tq@verkopen.bol.com",
+    "firstname": "Marcel",
+    "middlename": "",
+    "lastname": "Ligtvoet",
+    "phone": "0611223344",
+    "mobile": "-",
+    "isCompany": false,
+    "companyName": "",
+    "companyCoCNumber": "",
+    "companyVatNumber": "",
+    "addressBillingName": "Marcel Ligtvoet",
+    "addressBillingStreet": "Dijkshornhof",
+    "addressBillingStreet2": "",
+    "addressBillingNumber": "9",
+    "addressBillingExtension": "",
+    "addressBillingZipcode": "5043 HK",
+    "addressBillingCity": "TILBURG",
+    "addressBillingRegion": "",
+    "addressBillingCountry": {
+      "id": 150,
+      "code": "nl",
+      "code3": "nld",
+      "title": "Netherlands, The"
+    },
+    "addressShippingCompany": false,
+    "addressShippingName": "Marcel Ligtvoet",
+    "addressShippingStreet": "Dijkshornhof",
+    "addressShippingStreet2": "",
+    "addressShippingNumber": "9",
+    "addressShippingExtension": "",
+    "addressShippingZipcode": "5043 HK",
+    "addressShippingCity": "TILBURG",
+    "addressShippingRegion": "",
+    "addressShippingCountry": {
+      "id": 150,
+      "code": "nl",
+      "code3": "nld",
+      "title": "Netherlands, The"
+    },
+    "memo": null,
+    "doNotifyRegistered": false,
+    "doNotifyConfirmed": false,
+    "doNotifyPassword": false,
+    "groups": {
+      "resource": {
+        "id": false,
+        "url": "groups/customers?customer=6856292",
+        "link": "http://api.webshopapp.com/nl/groups/customers.json?customer=6856292"
+      }
+    },
+    "invoices": {
+      "resource": {
+        "id": false,
+        "url": "invoices?customer=6856292",
+        "link": "http://api.webshopapp.com/nl/invoices.json?customer=6856292"
+      }
+    },
+    "language": {
+      "id": 1,
+      "code": "nl",
+      "locale": "nl_NL",
+      "title": "Nederlands"
+    },
+    "orders": {
+      "resource": {
+        "id": false,
+        "url": "orders?customer=6856292",
+        "link": "http://api.webshopapp.com/nl/orders.json?customer=6856292"
+      }
+    },
+    "reviews": {
+      "resource": {
+        "id": false,
+        "url": "reviews?customer=6856292",
+        "link": "http://api.webshopapp.com/nl/reviews.json?customer=6856292"
+      }
+    },
+    "shipments": {
+      "resource": {
+        "id": false,
+        "url": "shipments?customer=6856292",
+        "link": "http://api.webshopapp.com/nl/shipments.json?customer=6856292"
+      }
+    },
+    "tickets": {
+      "resource": {
+        "id": false,
+        "url": "tickets?customer=6856292",
+        "link": "http://api.webshopapp.com/nl/tickets.json?customer=6856292"
+      }
+    },
+    "metafields": {
+      "resource": {
+        "id": false,
+        "url": "customers/6856292/metafields",
+        "link": "http://api.webshopapp.com/nl/customers/6856292/metafields.json"
+      }
+    },
+    "login": {
+      "resource": {
+        "id": false,
+        "url": "customers/6856292/login",
+        "link": "http://api.webshopapp.com/nl/customers/6856292/login.json"
+      }
+    }
+  }
+}

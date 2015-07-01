@@ -1,0 +1,78 @@
+{
+  "email_address": "email@address.com",
+  "order_number": "RHQO1234",
+  "url": "http://shop.com/order/RHQO1234",
+  "order_by_date": "2014/12/31",
+  "list_view": {
+    "order_number": "RHQO1234",
+    "date": "29-01-2014 12:34",
+    "status": "In progress"
+  },
+  "details_view": [
+    {
+      "display_as": "details",
+      "data": {
+        "date": "29-01-2014 12:34",
+        "status": "In progress",
+        "payment_status": "Partially paid",
+        "shipment_status": "Partially shipped"
+      }
+    },
+    {
+      "display_as": "columns",
+      "caption": "products",
+      "data": [
+        {
+          "product": "iPhone 5S",
+          "quantity": "1",
+          "price": "$695.50"
+        },
+        {
+          "product": "iPad 3",
+          "quantity": "2",
+          "price": "$898.00"
+        },
+        {
+          "product": "Shipment",
+          "quantity": "",
+          "price": "$10.00"
+        },
+        {
+          "product": "Total",
+          "quantity": "",
+          "price": "$1603.50"
+        }
+      ]
+    },
+    {
+      "display_as": "rows",
+      "caption": "shipments",
+      "data": [
+        {
+          "shipment": "<a href=\"http://shop.com/shipment/RHQS01\">RHQS01</a>",
+          "status": "Shipped"
+        },
+        {
+          "shipment": "<a href=\"http://shop.com/shipment/RHQS02\">RHQS02</a>",
+          "status": "Not shipped"
+        }
+      ]
+    },
+    {
+      "display_as": "rows",
+      "caption": "invoices",
+      "data": [
+        {
+          "shipment": "<a href=\"http://shop.com/invoice/RHQI01\">RHQI01</a>",
+          "status": "Paid",
+          "amount": "$1200.00"
+        },
+        {
+          "shipment": "<a href=\"http://shop.com/invoice/RHQI02\">RHQI02</a>",
+          "status": "Not paid",
+          "amount": "$403.50"
+        }
+      ]
+    }
+  ]
+}

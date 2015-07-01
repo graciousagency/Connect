@@ -1,0 +1,104 @@
+{
+  "id": 11102,
+  "createdAt": "2015-03-10T16:39:20+01:00",
+  "updatedAt": "2015-04-20T13:53:52+02:00",
+  "isVisible": true,
+  "visibility": "visible",
+  "data01": "",
+  "data02": "",
+  "data03": "",
+  "url": "wade-crewneck-navyblue",
+  "title": "Wade Crewneck Navyblue",
+  "fulltitle": "Wade Crewneck Navyblue",
+  "description": "De Wade Crewneck Navyblue van Wemoto. Deze blauwe trui met de enorme W op de chest heeft een heel klassieke look.",
+  "content": "De Wade Crewneck Navyblue van Wemoto. Deze blauwe trui met de enorme W op de chest heeft een heel klassieke look.",
+  "set": false,
+  "brand": false,
+  "categories": {
+    "resource": {
+      "id": false,
+      "url": "categories/products?product=11102",
+      "link": "http://api.webshopapp.com/nl/categories/products.json?product=11102"
+    }
+  },
+  "deliverydate": {
+    "resource": {
+      "id": 1,
+      "url": "deliverydates/1",
+      "link": "http://api.webshopapp.com/nl/deliverydates/1.json"
+    }
+  },
+  "image": {
+    "createdAt": "2015-03-10T16:39:45+01:00",
+    "updatedAt": "2015-03-10T16:39:45+01:00",
+    "extension": "jpg",
+    "size": 21266,
+    "title": "5",
+    "thumb": "http://static.webshopapp.com/shops/000001/files/000006776/50x50x2/5.jpg",
+    "src": "http://static.webshopapp.com/shops/000001/files/000006776/5.jpg"
+  },
+  "images": {
+    "resource": {
+      "id": false,
+      "url": "products/11102/images",
+      "link": "http://api.webshopapp.com/nl/products/11102/images.json"
+    }
+  },
+  "relations": {
+    "resource": {
+      "id": false,
+      "url": "products/11102/relations",
+      "link": "http://api.webshopapp.com/nl/products/11102/relations.json"
+    }
+  },
+  "metafields": {
+    "resource": {
+      "id": false,
+      "url": "products/11102/metafields",
+      "link": "http://api.webshopapp.com/nl/products/11102/metafields.json"
+    }
+  },
+  "reviews": {
+    "resource": {
+      "id": false,
+      "url": "reviews?product=11102",
+      "link": "http://api.webshopapp.com/nl/reviews.json?product=11102"
+    }
+  },
+  "type": {
+    "resource": {
+      "id": 8,
+      "url": "types/8",
+      "link": "http://api.webshopapp.com/nl/types/8.json"
+    }
+  },
+  "attributes": {
+    "resource": {
+      "id": false,
+      "url": "products/11102/attributes",
+      "link": "http://api.webshopapp.com/nl/products/11102/attributes.json"
+    }
+  },
+  "supplier": false,
+  "tags": {
+    "resource": {
+      "id": false,
+      "url": "tags/products?product=11102",
+      "link": "http://api.webshopapp.com/nl/tags/products.json?product=11102"
+    }
+  },
+  "variants": {
+    "resource": {
+      "id": false,
+      "url": "variants?product=11102",
+      "link": "http://api.webshopapp.com/nl/variants.json?product=11102"
+    }
+  },
+  "movements": {
+    "resource": {
+      "id": false,
+      "url": "variants/movements?product=11102",
+      "link": "http://api.webshopapp.com/nl/variants/movements.json?product=11102"
+    }
+  }
+}

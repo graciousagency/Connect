@@ -1,0 +1,124 @@
+{
+  "id": 6856292,
+  "url": "customers/6856292",
+  "link": "http://api.webshopapp.com/nl/customers/6856292.json",
+  "embedded": {
+    "id": 6856292,
+    "createdAt": "2015-02-23T16:51:41+01:00",
+    "updatedAt": "2015-04-21T11:16:04+02:00",
+    "isConfirmed": true,
+    "type": "registered",
+    "lastOnlineAt": "2015-04-21T11:16:04+02:00",
+    "remoteIp": "127.0.0.1",
+    "userAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_10_3) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/42.0.2311.90 Safari/537.36",
+    "referralId": false,
+    "gender": "male",
+    "birthDate": "1991-01-01",
+    "nationalId": "234567890",
+    "email": "info@seoshop.com",
+    "firstname": "Menno",
+    "middlename": "",
+    "lastname": "Wolvers",
+    "phone": "",
+    "mobile": "",
+    "isCompany": false,
+    "companyName": null,
+    "companyCoCNumber": null,
+    "companyVatNumber": null,
+    "addressBillingName": "Menno Wolvers",
+    "addressBillingStreet": "Keizersgracht",
+    "addressBillingStreet2": "",
+    "addressBillingNumber": "313",
+    "addressBillingExtension": "",
+    "addressBillingZipcode": "1016 EE",
+    "addressBillingCity": "Amsterdam",
+    "addressBillingRegion": "",
+    "addressBillingCountry": {
+      "id": 150,
+      "code": "nl",
+      "code3": "nld",
+      "title": "Netherlands, The"
+    },
+    "addressShippingCompany": false,
+    "addressShippingName": "Menno Wolvers",
+    "addressShippingStreet": "Keizersgracht",
+    "addressShippingStreet2": "",
+    "addressShippingNumber": "313",
+    "addressShippingExtension": "",
+    "addressShippingZipcode": "1016 EE",
+    "addressShippingCity": "Amsterdam",
+    "addressShippingRegion": "",
+    "addressShippingCountry": {
+      "id": 150,
+      "code": "nl",
+      "code3": "nld",
+      "title": "Netherlands, The"
+    },
+    "memo": null,
+    "doNotifyRegistered": false,
+    "doNotifyConfirmed": false,
+    "doNotifyPassword": false,
+    "groups": {
+      "resource": {
+        "id": false,
+        "url": "groups/customers?customer=6856292",
+        "link": "http://api.webshopapp.com/nl/groups/customers.json?customer=6856292"
+      }
+    },
+    "invoices": {
+      "resource": {
+        "id": false,
+        "url": "invoices?customer=6856292",
+        "link": "http://api.webshopapp.com/nl/invoices.json?customer=6856292"
+      }
+    },
+    "language": {
+      "id": 1,
+      "code": "nl",
+      "locale": "nl_NL",
+      "title": "Nederlands"
+    },
+    "orders": {
+      "resource": {
+        "id": false,
+        "url": "orders?customer=6856292",
+        "link": "http://api.webshopapp.com/nl/orders.json?customer=6856292"
+      }
+    },
+    "reviews": {
+      "resource": {
+        "id": false,
+        "url": "reviews?customer=6856292",
+        "link": "http://api.webshopapp.com/nl/reviews.json?customer=6856292"
+      }
+    },
+    "shipments": {
+      "resource": {
+        "id": false,
+        "url": "shipments?customer=6856292",
+        "link": "http://api.webshopapp.com/nl/shipments.json?customer=6856292"
+      }
+    },
+    "tickets": {
+      "resource": {
+        "id": false,
+        "url": "tickets?customer=6856292",
+        "link": "http://api.webshopapp.com/nl/tickets.json?customer=6856292"
+      }
+    },
+    "metafields": {
+      "resource": {
+        "id": false,
+        "url": "customers/6856292/metafields",
+        "link": "http://api.webshopapp.com/nl/customers/6856292/metafields.json"
+      }
+    },
+    "login": {
+      "resource": {
+        "id": false,
+        "url": "customers/6856292/login",
+        "link": "http://api.webshopapp.com/nl/customers/6856292/login.json"
+      }
+    }
+  }
+}
