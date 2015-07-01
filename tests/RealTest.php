@@ -38,8 +38,8 @@ class RealTest extends TestCase
                     $customer->email,
                     $date,
                     $customer->orders->count,
-                    $customer->orders->totalFormatted(),
-                    Panel::make($customer->orders->count, $customer->orders->totalFormatted())
+                    $customer->orders->totalSpendFormatted(),
+                    Panel::make($customer->orders->count, $customer->orders->totalSpendFormatted())
                 )
             );
         }

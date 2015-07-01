@@ -38,7 +38,7 @@ class Orders extends LaravelCollection implements Collection
         );
     }
 
-    public function totalFormatted()
+    public function totalSpendFormatted()
     {
         return "€" . $this->total;
     }
