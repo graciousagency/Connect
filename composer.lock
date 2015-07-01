@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "3e953f3b18241d42b42e48edf1e3a0f9",
+    "hash": "abff6eec1cf82a99bd7f3f082926dd75",
     "packages": [
         {
             "name": "danielstjules/stringy",
@@ -493,11 +493,11 @@
         },
         {
             "name": "robin/api",
-            "version": "0.1.1",
+            "version": "0.1.3",
             "source": {
                 "type": "git",
                 "url": "/Users/bwubs/Werk/Robin/Modules/Api",
-                "reference": "c8beab6cb7844cc42e3602354eb298f5b60c7d75"
+                "reference": "faf08a4367a47aa242eb3ba3c415e102e9577ce1"
             },
             "require": {
                 "guzzlehttp/guzzle": "~6.0",
@@ -530,7 +530,7 @@
                 }
             ],
             "description": "PHP Wrapper for the robin api",
-            "time": "2015-06-30 14:02:53"
+            "time": "2015-07-01 08:40:11"
         },
         {
             "name": "robin/support",

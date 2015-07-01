@@ -7,8 +7,8 @@ namespace Robin\Connect\ServiceProviders;
 use Illuminate\Contracts\Foundation\Application;
 use Illuminate\Support\ServiceProvider;
 use Robin\Support\Contracts\Retriever;
-use Robin\Connect\SEOShop\SEOShop as SEOShop;
-use Robin\Api\Client as Robin;
+use Robin\Connect\SEOShop\SEOShop;
+use Robin\Api\Robin;
 use Robin\Support\Contracts\Sender;
 
 class RobinConnectSEOShopServiceProvider extends ServiceProvider
