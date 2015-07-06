@@ -54,7 +54,7 @@ class DetailViewMaker
         $products = $seoOrder->orderProducts;
         $robinProducts = Products::make();
         foreach ($products as $product) {
-            $robinProducts->push(Product::fromSeoShop($product));
+            $robinProducts->push(Product::make($product->productTitle, $product->quantityOrdered, $product->priceIncl));
         }
 
         return $robinProducts;
