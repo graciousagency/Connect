@@ -28,10 +28,10 @@ class TestCase extends \PHPUnit_Framework_TestCase
     public function getRobin()
     {
         $key = env('ROBIN_API_KEY');
-        $secret = env('ROIBIN_API_SECRET');
+        $secret = env('ROBIN_API_SECRET');
         $url = env('ROBIN_API_URL');
 
-        return new \Robin\Api\Client($key, $secret, $url);
+        return new \Robin\Api\Robin($key, $secret, $url);
     }
 
     protected function setUp()
