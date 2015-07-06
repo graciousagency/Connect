@@ -17,7 +17,7 @@ class RealTest extends TestCase
 
     public function testSendCustomersToRobin()
     {
-//        $this->markTestSkipped("This test hits the network, turn it on when you need to fully test the whole package");
+        $this->markTestSkipped("This test hits the network, turn it on when you need to fully test the whole package");
 
         $seoShop = $this->getSeoshop();
         $robin = $this->getRobin();
@@ -52,7 +52,7 @@ class RealTest extends TestCase
 
     public function testSendOrdersToRobin()
     {
-//        $this->markTestSkipped("This test hits the network, turn it on when you need to fully test the whole package");
+        $this->markTestSkipped("This test hits the network, turn it on when you need to fully test the whole package");
 
         $seoShop = $this->getSeoshop();
         $robin = $this->getRobin();
