@@ -3,6 +3,7 @@
 
 namespace Robin\Connect\SEOShop\Models;
 
+use Carbon\Carbon;
 use Illuminate\Contracts\Support\Jsonable;
 use Illuminate\Support\Collection;
 use Illuminate\Support\Str;
@@ -160,10 +161,16 @@ abstract class Model implements Jsonable, SEOShopModel
     private function getValueFromKey($key, $namedResource = "")
     {
         $value = $this->data->{$key};
+
         if ($resource = $this->isResource($value)) {
             $key = ($namedResource !== "") ? $namedResource : $key;
             return $this->getResource($key, $resource);
         }
+
+        if (in_array($key, ['createdAt', 'updatedAt'])) {
+            return Carbon::createFromFormat("Y-m-d\\TH:i:sP", $value);
+        }
+
         return $value;
     }
 

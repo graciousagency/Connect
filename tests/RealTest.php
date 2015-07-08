@@ -32,7 +32,7 @@ class RealTest extends TestCase
         $robinCustomers = new Customers();
 
         foreach ($customers as $customer) {
-            $date = Carbon::createFromFormat("Y-m-d\\TH:i:sP", $customer->createdAt);
+            $date = $customer->createdAt;
             $robinCustomers->push(
                 Customer::make(
                     $customer->email,
@@ -62,7 +62,7 @@ class RealTest extends TestCase
         $robinOrders = new Orders();
 
         foreach ($orders as $order) {
-            $createdAt = Carbon::createFromFormat("Y-m-d\\TH:i:sP", $order->createdAt);
+            $createdAt = $order->createdAt;
             $listView = ListView::make($order->number, $createdAt, $order->status);
             $detailsView = DetailViewMaker::makeDetailViews($order);
 

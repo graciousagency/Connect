@@ -3,6 +3,7 @@
 
 namespace Robin\Connect\SEOShop\Models;
 
+use Carbon\Carbon;
 use Illuminate\Support\Collection;
 
 /**
@@ -10,8 +11,8 @@ use Illuminate\Support\Collection;
  * @package Robin\Connect\SEOShop\Models
  *
  * @property int id
- * @property string createdAt
- * @property string updatedAt
+ * @property Carbon createdAt
+ * @property Carbon updatedAt
  * @property string number
  * @property string status
  * @property string trackingCode

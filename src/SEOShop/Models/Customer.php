@@ -3,6 +3,7 @@
 
 namespace Robin\Connect\SEOShop\Models;
 
+use Carbon\Carbon;
 use Illuminate\Support\Collection;
 
 
@@ -11,8 +12,8 @@ use Illuminate\Support\Collection;
  * @package App\SEOShop\Response
  *
  * @property int id
- * @property string createdAt
- * @property string updatedAt
+ * @property Carbon createdAt
+ * @property Carbon updatedAt
  * @property boolean isConfirmed
  * @property string type
  * @property string lastOnlineAt
