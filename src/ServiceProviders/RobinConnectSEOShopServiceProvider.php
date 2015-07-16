@@ -21,7 +21,21 @@ class RobinConnectSEOShopServiceProvider extends ServiceProvider
      */
     public function register()
     {
+        $this->bindContracts();
 
+        $this->registerSingletons();
+
+    }
+
+    private function registerSingletons()
+    {
+        $this->registerSEOShop();
+
+        $this->registerRobin();
+    }
+
+    private function registerSEOShop()
+    {
         $this->app->singleton(
             'WebshopappApiClient',
             function () {
@@ -33,9 +47,17 @@ class RobinConnectSEOShopServiceProvider extends ServiceProvider
             }
         );
 
-        $this->app->bind(Sender::class, Robin::class);
+        $this->app->singleton(
+            SEOShop::class,
+            function (\WebshopappApiClient $webshopappApiClient) {
+                return new SEOShop($webshopappApiClient);
+            }
+        );
+    }
 
-        $this->app->bind(
+    private function registerRobin()
+    {
+        $this->app->singleton(
             Robin::class,
             function () {
                 $key = env("ROBIN_API_KEY");
@@ -45,19 +67,12 @@ class RobinConnectSEOShopServiceProvider extends ServiceProvider
                 return new Robin($key, $secret, $url);
             }
         );
+    }
 
-        $this->app->bind(
-            Retriever::class,
-            SEOShop::class
-        );
-        $this->app->bind(
-            SEOShop::class,
-            function (Application $application) {
-                /** @var \WebshopappApiClient $webshopappApiClient */
-                $webshopappApiClient = $application->make('WebshopappApiClient');
+    private function bindContracts()
+    {
+        $this->app->bind(Sender::class, Robin::class);
 
-                return new SEOShop($webshopappApiClient);
-            }
-        );
+        $this->app->bind(Retriever::class, SEOShop::class);
     }
 }
