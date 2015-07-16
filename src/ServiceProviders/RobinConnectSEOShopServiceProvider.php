@@ -6,6 +6,8 @@ namespace Robin\Connect\ServiceProviders;
 
 use Illuminate\Contracts\Foundation\Application;
 use Illuminate\Support\ServiceProvider;
+use Monolog\Logger;
+use Robin\Api\Logger\RobinLogger;
 use Robin\Support\Contracts\Retriever;
 use Robin\Connect\SEOShop\SEOShop;
 use Robin\Api\Robin;
@@ -24,6 +26,13 @@ class RobinConnectSEOShopServiceProvider extends ServiceProvider
         $this->bindContracts();
 
         $this->registerSingletons();
+
+        $this->app->singleton(
+            RobinLogger::class,
+            function () {
+                return new RobinLogger(new Logger("ROBIN"));
+            }
+        );
 
     }
 
