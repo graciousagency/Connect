@@ -32,8 +32,9 @@ class RobinConnectSEOShopServiceProvider extends ServiceProvider
 
         $this->app->singleton(
             RobinLogger::class,
-            function () {
-                $monolog = Log::getMonolog();
+            function (Application $app) {
+                $monolog = $app->make('log');
+
                 $syslog = new SyslogHandler(env('PAPERTRAIL_APP_NAME'));
                 $formatter = new LineFormatter('%channel%.%level_name%: %message% %extra%');
                 $syslog->setFormatter($formatter);

@@ -66,9 +66,9 @@ use Illuminate\Support\Collection;
  * @property Collection metafields
  * @property Collection login
  *
- * @method Customer makeFromJson
- * @method Customer makeFromArray
- * @method Customer makeFromObject
+ * @method Customer makeFromJson($json)
+ * @method Customer makeFromArray($array)
+ * @method Customer makeFromObject($object)
  */
 class Customer extends Model
 {
