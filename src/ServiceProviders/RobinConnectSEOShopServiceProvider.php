@@ -36,7 +36,7 @@ class RobinConnectSEOShopServiceProvider extends ServiceProvider
                 $monolog = $app->make('log');
 
                 $syslog = new SyslogHandler(env('PAPERTRAIL_APP_NAME'));
-                $formatter = new LineFormatter('%channel%.%level_name%: %message% %extra%');
+                $formatter = new LineFormatter('%channel%.%level_name%: %message% %extra% %context%');
                 $syslog->setFormatter($formatter);
 
                 $monolog->pushHandler($syslog);
