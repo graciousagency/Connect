@@ -5,6 +5,7 @@ namespace Robin\Connect\ServiceProviders;
 
 
 use Illuminate\Contracts\Foundation\Application;
+use Illuminate\Support\Facades\Log;
 use Illuminate\Support\ServiceProvider;
 use Monolog\Formatter\LineFormatter;
 use Monolog\Handler\SyslogHandler;
@@ -32,7 +33,7 @@ class RobinConnectSEOShopServiceProvider extends ServiceProvider
         $this->app->singleton(
             RobinLogger::class,
             function () {
-                $monolog = new Logger("ROBIN");
+                $monolog = Log::getMonolog();
                 $syslog = new SyslogHandler(env('PAPERTRAIL_APP_NAME'));
                 $formatter = new LineFormatter('%channel%.%level_name%: %message% %extra%');
                 $syslog->setFormatter($formatter);
