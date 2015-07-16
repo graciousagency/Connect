@@ -33,7 +33,7 @@ class RobinConnectSEOShopServiceProvider extends ServiceProvider
             RobinLogger::class,
             function () {
                 $monolog = new Logger("ROBIN");
-                $syslog = new SyslogHandler('papertrail');
+                $syslog = new SyslogHandler(env('PAPERTRAIL_APP_NAME'));
                 $formatter = new LineFormatter('%channel%.%level_name%: %message% %extra%');
                 $syslog->setFormatter($formatter);
 
