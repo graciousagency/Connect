@@ -58,7 +58,7 @@ class RobinConnectSEOShopServiceProvider extends ServiceProvider
 
         $this->app->singleton(
             SEOShop::class,
-            function (\WebshopappApiClient $webshopappApiClient) {
+            function (Application $app, \WebshopappApiClient $webshopappApiClient) {
                 return new SEOShop($webshopappApiClient);
             }
         );
