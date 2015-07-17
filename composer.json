@@ -7,12 +7,12 @@
   },
   "require-dev": {
     "phpunit/phpunit": "^4.7",
-    "mockery/mockery": "^0.9.4"
+    "mockery/mockery": "^0.9.4",
     "vlucas/phpdotenv": "v2.0.1",
     "symfony/var-dumper": "v2.7.1",
     "league/flysystem": "1.0.4"
   },
-  "license": "GPL v3",
+  "license": "GPL-3.0",
   "authors": [
     {
       "name": "Bram Wubs",
