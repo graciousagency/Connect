@@ -18,7 +18,6 @@ use Robin\Connect\SEOShop\Models\Order;
 
 class DetailViewMaker
 {
-    use DateFormatter;
 
     /**
      * @param Order $seoOrder
@@ -46,7 +45,7 @@ class DetailViewMaker
     private static function createDetailsView(order $order)
     {
         return OrderDetails::make(
-            static::formatDate($order->createdAt),
+            $order->createdAt,
             $order->status,
             $order->paymentStatus,
             $order->shipmentStatus

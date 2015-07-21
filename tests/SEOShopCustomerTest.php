@@ -107,7 +107,8 @@ class SEOShopCustomerTest extends TestCase
     public function testAccessingNotExistingPropertyResultsInException()
     {
         $model = $this->getModel("customer");
-        $customer = new Customer(new FakeClient());
+        $client = Mockery::mock(Retriever::class);
+        $customer = new Customer($client);
         $customer->makeFromJson($model);
 
         $customer->foo;

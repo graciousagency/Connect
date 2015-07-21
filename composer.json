@@ -2,7 +2,7 @@
   "name": "robinhq/connect",
   "description": "Connect your webshop with ROBIN",
   "require": {
-    "robinhq/api": "0.1.0",
+    "robinhq/api": "~0.1.0",
     "seoshop/seoshop-php": "v1.7.0"
   },
   "require-dev": {
