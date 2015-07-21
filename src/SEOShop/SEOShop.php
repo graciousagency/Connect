@@ -114,4 +114,12 @@ class SEOShop implements Retriever
     {
         return $this->api->getApiCallsMade();
     }
+
+    /**
+     * @return \WebshopappApiClient
+     */
+    public function getApi()
+    {
+        return $this->api;
+    }
 }
