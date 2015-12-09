@@ -2,7 +2,7 @@
   "name": "graciousstudios/connect",
   "description": "Connect your webshop with ROBIN",
   "require": {
-    "robinhq/api": "~0.1.1",
+    "graciousstudios/api": "~0.1.1",
     "seoshop/seoshop-php": "v1.7.0"
   },
   "require-dev": {
