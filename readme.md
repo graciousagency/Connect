@@ -8,7 +8,7 @@ integration.
 ### Laravel / Lumen
 Simply do:
 ```BASH
-$ composer require robin/connect
+$ composer require graciousstudios/connect
 ```
 
 And register `RobinConnectSEOShopServiceProvider::class` as a service provider. For lumen, inside `bootstrap/app.php`
