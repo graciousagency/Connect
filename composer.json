@@ -1,5 +1,5 @@
 {
-  "name": "robinhq/connect",
+  "name": "graciousstudios/connect",
   "description": "Connect your webshop with ROBIN",
   "require": {
     "robinhq/api": "~0.1.0",
