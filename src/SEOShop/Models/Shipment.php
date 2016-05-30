@@ -24,11 +24,16 @@ use Illuminate\Support\Collection;
  * @property Collection metafields
  * @property Collection events
  */
-class Shipment extends Model
-{
-    public function getEditUrl()
-    {
-        $url = $this->createBackOfficeUrl('sales-order/edit', ['tab' => 'shipments', 'id' => $this->id]);
-        return "<a href='" . $url . "'>" . $this->getModelName() . "</a>";
+class Shipment extends Model {
+
+    /**
+     * @param int $orderID
+     * @return string
+     */
+    public function getEditUrl($orderID) {
+//        $url = $this->createBackOfficeUrl('sales-order/edit', ['tab' => 'shipments', 'id' => $this->id]);
+        $url = $this->createBackOfficeUrl('sales-orders/edit', ['tab' => 'shipments', 'id' => $orderID]);
+
+        return "<a href='" . $url . "' target='_blank'>" . $this->getModelName() . "</a>";
     }
 }

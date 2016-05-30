@@ -29,11 +29,11 @@ use Illuminate\Support\Collection;
  * @property Collection metafields
  * @property Collection events
  */
-class Invoice extends Model
-{
-    public function getEditUrl()
-    {
-        $url = $this->createBackOfficeUrl('sales-orders/edit', ['tab' => 'invoices', 'id' => $this->id]);
-        return "<a href='" . $url . "'>" . $this->getModelName() . "</a>";
+class Invoice extends Model {
+
+    public function getEditUrl($orderID) {
+//        $url = $this->createBackOfficeUrl('sales-orders/edit', ['tab' => 'invoices', 'id' => $this->id]);
+        $url = $this->createBackOfficeUrl('sales-orders/edit', ['tab' => 'invoices', 'id' => $orderID]);
+        return "<a href='" . $url . "' target='_blank'>" . $this->getModelName() . "</a>";
     }
 }

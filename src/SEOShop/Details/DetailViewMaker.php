@@ -48,7 +48,12 @@ class DetailViewMaker
             $order->createdAt,
             $order->status,
             $order->paymentStatus,
-            $order->shipmentStatus
+            $order->shipmentStatus,
+            $order->paymentId,
+            $order->discountType,
+            $order->discountPercentage,
+            $order->discountAmount,
+            $order->discountCouponCode
         );
     }
 
@@ -61,7 +66,7 @@ class DetailViewMaker
         $products = $order->orderProducts;
         $robinProducts = Products::make();
         foreach ($products as $product) {
-            $robinProducts->push(Product::make($product->productTitle, $product->quantityOrdered, $product->priceIncl));
+            $robinProducts->push(Product::make($product->productTitle, $product->quantityOrdered, $product->priceIncl, $product->variantTitle));
         }
 
         return $robinProducts;
@@ -72,7 +77,7 @@ class DetailViewMaker
         $shipments = $seoOrder->shipments;
         $robinShipments = Shipments::make();
         foreach ($shipments as $shipment) {
-            $robinShipments->push(Shipment::make($shipment->getEditUrl(), $shipment->status));
+            $robinShipments->push(Shipment::make($shipment->getEditUrl($seoOrder->id), $shipment->status));
         }
         return $robinShipments;
     }
@@ -82,7 +87,7 @@ class DetailViewMaker
         $invoices = $seoOrder->invoices;
         $robinInvoices = Invoices::make();
         foreach ($invoices as $invoice) {
-            $robinInvoices->push(Invoice::make($invoice->getEditUrl(), $invoice->status, $invoice->priceIncl));
+            $robinInvoices->push(Invoice::make($invoice->getEditUrl($seoOrder->id), $invoice->status, $invoice->priceIncl));
         }
         return $robinInvoices;
     }

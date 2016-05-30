@@ -11,8 +11,7 @@ use Robin\Support\Contracts\Retriever;
 use Robin\Connect\SEOShop\Exceptions\PropertyDoesNotExistsException;
 use Robin\Connect\SEOShop\Contracts\SEOShopModel;
 
-abstract class Model implements Jsonable, SEOShopModel
-{
+abstract class Model implements Jsonable, SEOShopModel {
 
     private $backendUrl = "https://seoshop.webshopapp.com/backoffice/";
 
@@ -36,8 +35,7 @@ abstract class Model implements Jsonable, SEOShopModel
     /**
      * @param Retriever $client
      */
-    public function __construct(Retriever $client)
-    {
+    public function __construct(Retriever $client) {
         $this->client = $client;
         $this->fetched = collect();
     }
@@ -46,8 +44,7 @@ abstract class Model implements Jsonable, SEOShopModel
      * @param string $model
      * @return Model
      */
-    public function makeFromJson($model)
-    {
+    public function makeFromJson($model) {
         if (is_string($model)) {
             return $this->make(json_decode($model));
         }
@@ -59,8 +56,7 @@ abstract class Model implements Jsonable, SEOShopModel
      * @param $model
      * @return Model
      */
-    public function makeFromObject($model)
-    {
+    public function makeFromObject($model) {
         if (is_object($model)) {
             return $this->make($model);
         }
@@ -72,8 +68,7 @@ abstract class Model implements Jsonable, SEOShopModel
      * @param array $model
      * @return Model
      */
-    public function makeFromArray(array $model)
-    {
+    public function makeFromArray(array $model) {
 
         $model = json_decode(json_encode($model));
 
@@ -85,9 +80,7 @@ abstract class Model implements Jsonable, SEOShopModel
      * @return Collection|Resource|string
      * @throws PropertyDoesNotExistsException
      */
-    public function __get($key)
-    {
-
+    public function __get($key) {
         if (property_exists($this->data, $key)) {
             return $this->getValueFromKey($key);
         }
@@ -104,14 +97,12 @@ abstract class Model implements Jsonable, SEOShopModel
     /**
      * @return mixed|null|string
      */
-    public function getModelName()
-    {
+    public function getModelName() {
         $key = collect(explode('\\', get_class($this)))->last();
         return lcfirst($key);
     }
 
-    public function __toString()
-    {
+    public function __toString() {
         return $this->toJson();
     }
 
@@ -121,8 +112,7 @@ abstract class Model implements Jsonable, SEOShopModel
      * @param  int $options
      * @return string
      */
-    public function toJson($options = 0)
-    {
+    public function toJson($options = 0) {
         return json_encode($this->data, $options);
     }
 
@@ -131,8 +121,7 @@ abstract class Model implements Jsonable, SEOShopModel
      *
      * @return array
      */
-    public function toArray()
-    {
+    public function toArray() {
         $collection = collect();
         foreach ($this->data as $key => $value) {
             $key = Str::snake($key);
@@ -145,8 +134,7 @@ abstract class Model implements Jsonable, SEOShopModel
      * @param \stdClass $object
      * @return $this
      */
-    private function make(\stdClass $object)
-    {
+    private function make(\stdClass $object) {
         $modelName = $this->getModelName();
 
         $this->data = $this->getModelData($object, $modelName);
@@ -158,8 +146,7 @@ abstract class Model implements Jsonable, SEOShopModel
      * @param string $namedResource
      * @return mixed
      */
-    private function getValueFromKey($key, $namedResource = "")
-    {
+    protected function getValueFromKey($key, $namedResource = "") {
         $value = $this->data->{$key};
 
         if ($resource = $this->isResource($value)) {
@@ -178,18 +165,15 @@ abstract class Model implements Jsonable, SEOShopModel
      * @param $value
      * @return bool
      */
-    private function isResource($value)
-    {
-        return (gettype($value) !== "string" && gettype($value) === "object" && property_exists($value, 'resource'))
-            ? $value->resource : false;
+    private function isResource($value) {
+        return (gettype($value) !== "string" && gettype($value) === "object" && property_exists($value, 'resource')) ? $value->resource : false;
     }
 
     /**
      * @param $key
      * @return bool
      */
-    private function notFetched($key)
-    {
+    private function notFetched($key) {
         return !$this->fetched->has($key);
     }
 
@@ -198,8 +182,7 @@ abstract class Model implements Jsonable, SEOShopModel
      * @param $resource
      * @return mixed
      */
-    private function getResource($key, $resource)
-    {
+    private function getResource($key, $resource) {
         if ($this->notFetched($key)) {
             $result = $this->client->retrieve($resource, $key);
             $this->fetched->put($key, $result);
@@ -208,8 +191,7 @@ abstract class Model implements Jsonable, SEOShopModel
         return $this->fetched->get($key);
     }
 
-    protected function createBackOfficeUrl($uri, $parameters = [])
-    {
+    protected function createBackOfficeUrl($uri, $parameters = []) {
         $parameters = http_build_query($parameters, "&");
 
         $url = $this->backendUrl . $uri . '?' . $parameters;
@@ -220,8 +202,7 @@ abstract class Model implements Jsonable, SEOShopModel
      * @param $model
      * @param $modelName
      */
-    private function getModelData($model, $modelName)
-    {
+    private function getModelData($model, $modelName) {
         return (
             property_exists($model, $modelName)
             && !$this->isResource($model->{$modelName})

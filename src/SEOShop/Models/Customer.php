@@ -70,7 +70,5 @@ use Illuminate\Support\Collection;
  * @method Customer makeFromArray($array)
  * @method Customer makeFromObject($object)
  */
-class Customer extends Model
-{
-
+class Customer extends Model {
 }
