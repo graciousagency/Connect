@@ -183,12 +183,12 @@ abstract class Model implements Jsonable, SEOShopModel {
      * @return mixed
      */
     private function getResource($key, $resource) {
-        if ($this->notFetched($key)) {
-            $result = $this->client->retrieve($resource, $key);
-            $this->fetched->put($key, $result);
-        }
+//        if ($this->notFetched($key)) {
+            return $this->client->retrieve($resource, $key);
+//            $this->fetched->put($key, $result);
+//        }
 
-        return $this->fetched->get($key);
+//        return $this->fetched->get($key);
     }
 
     protected function createBackOfficeUrl($uri, $parameters = []) {
