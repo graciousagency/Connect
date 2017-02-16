@@ -3,7 +3,7 @@
 
 namespace Robin\Connect\SEOShop\Details;
 
-use \Cache;
+
 use Robin\Api\Collections\DetailsView;
 use Robin\Api\Collections\Invoices;
 use Robin\Api\Collections\Products;
@@ -61,25 +61,16 @@ class DetailViewMaker
      * @param order $order
      * @return DetailViewItem
      */
-	private static function createProductsView(order $order)
-	{
-		$products = $order->orderProducts;
-		$robinProducts = Products::make();
-		foreach ($products as $product) {
-			$cacheHandle = md5($product->productTitle);
+    private static function createProductsView(order $order)
+    {
+        $products = $order->orderProducts;
+        $robinProducts = Products::make();
+        foreach ($products as $product) {
+            $robinProducts->push(Product::make($product->productTitle, $product->quantityOrdered, $product->priceIncl, $product->variantTitle));
+        }
 
-			if(Cache::has($cacheHandle)) {
-				$robinProducts->push(Cache::get($cacheHandle));
-			} else {
-				$product = Product::make($product->productTitle, $product->quantityOrdered, $product->priceIncl, $product->variantTitle);
-
-				Cache::add($cacheHandle,$product, 1440);
-				$robinProducts->push($product);
-			}
-		}
-
-		return $robinProducts;
-	}
+        return $robinProducts;
+    }
 
     private static function createShipmentsView(order $seoOrder)
     {
