@@ -3,7 +3,7 @@
 
 namespace Robin\Connect\SEOShop\Details;
 
-
+use \Cache;
 use Robin\Api\Collections\DetailsView;
 use Robin\Api\Collections\Invoices;
 use Robin\Api\Collections\Products;
