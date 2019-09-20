@@ -3,7 +3,7 @@
   "description": "Connect your webshop with ROBIN",
   "require": {
     "graciousstudios/api": "0.1.*",
-    "seoshop/seoshop-php": "v1.7.0"
+    "seoshop/seoshop-php": "v1.9.1"
   },
   "require-dev": {
     "phpunit/phpunit": "^4.7",
