@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "d25dfa607d9574c3e26136a4b2c3a011",
+    "content-hash": "b4b49ad51ed70673290063f905f5eb2e",
     "packages": [
         {
             "name": "danielstjules/stringy",
@@ -690,23 +690,24 @@
         },
         {
             "name": "seoshop/seoshop-php",
-            "version": "v1.7.0",
+            "version": "v1.9.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/SEOshop/API-PHP-Client.git",
-                "reference": "15f213a4082b6bbefc803217c537d99c55e4e0ac"
+                "reference": "42faa411c65c524161d10a2737a9560f47d580ed"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/SEOshop/API-PHP-Client/zipball/15f213a4082b6bbefc803217c537d99c55e4e0ac",
-                "reference": "15f213a4082b6bbefc803217c537d99c55e4e0ac",
+                "url": "https://api.github.com/repos/SEOshop/API-PHP-Client/zipball/42faa411c65c524161d10a2737a9560f47d580ed",
+                "reference": "42faa411c65c524161d10a2737a9560f47d580ed",
                 "shasum": ""
             },
             "require": {
                 "ext-curl": "*",
+                "ext-fileinfo": "*",
                 "ext-json": "*",
                 "ext-mbstring": "*",
-                "php": ">=5.3.0"
+                "php": ">=5.4.0"
             },
             "type": "library",
             "autoload": {
@@ -720,18 +721,20 @@
             ],
             "authors": [
                 {
-                    "name": "SEOshop and contributors",
+                    "name": "Lightspeed and contributors",
                     "homepage": "https://github.com/SEOshop/API-PHP-Client/contributors"
                 }
             ],
-            "description": "PHP client for the SEOshop API",
-            "homepage": "http://developers.seoshop.com",
+            "description": "PHP client for the Lightspeed eCom API",
+            "homepage": "http://developers.lightspeedhq.com/ecom",
             "keywords": [
                 "api",
                 "client",
+                "ecom",
+                "lightspeed",
                 "php"
             ],
-            "time": "2015-06-05T10:21:20+00:00"
+            "time": "2019-02-19T10:57:57+00:00"
         },
         {
             "name": "symfony/polyfill-mbstring",
